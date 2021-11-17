@@ -26,6 +26,17 @@ class Rabbit extends Animal {
     hide () {
         alert(`${this.name} hides!`);
     }
+    //Arrow functions have no super
+    //Unless called from outer function in this case setTimeout
+    stop(){
+        
+        setTimeout(()=>super.stop(),1000);
+
+        /*
+        ** setTimeout(function() { super.stop() }, 1000)
+        ** returns Unexpected super
+        */
+    }
 }
 
 let rabbit = new Rabbit("White Rabbit");
@@ -48,3 +59,5 @@ class User extends f('Hello'){}
 new User().sayHi();
 
 //Here class User inherits from the result of f("Hello").
+
+
