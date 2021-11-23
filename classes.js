@@ -2,6 +2,7 @@
 //So we can create new functionality
 
 class Animal {
+    //Pass a name variable when initializing
     constructor(name){
         this.speed = 0;
         this.name = name;
